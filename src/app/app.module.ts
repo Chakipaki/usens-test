@@ -7,13 +7,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { PasswordStrengthDirective } from "./shared/directives/password-strength.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PasswordStrengthComponent,
-    PasswordStrengthDirective
+    PasswordStrengthComponent
   ],
   imports: [
     BrowserModule,
