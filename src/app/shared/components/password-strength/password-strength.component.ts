@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl} from "@angular/forms";
-import { Subject, takeUntil } from "rxjs";
+import { Subject } from "rxjs";
 
 @Component({
   selector: 'app-password-strength',
@@ -9,15 +8,9 @@ import { Subject, takeUntil } from "rxjs";
 })
 export class PasswordStrengthComponent implements OnInit, OnDestroy {
   private _destroyed = new Subject();
-  password: FormControl = new FormControl('');
+  password: string = '';
 
   ngOnInit() {
-    this.password.valueChanges
-      .pipe(
-        takeUntil(this._destroyed)
-      ).subscribe(value => {
-        console.log(value)
-      })
   }
 
   ngOnDestroy() {
